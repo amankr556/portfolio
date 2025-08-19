@@ -1,0 +1,3 @@
+"use client";
+import {useEffect,useState} from 'react';
+export default function Typewriter({words=[],speed=80,pause=1200}){const [index,setIndex]=useState(0);const [sub,setSub]=useState('');useEffect(()=>{let mounted=true;let i=0;const type=()=>{const word=words[index%words.length];if(i<=word.length){if(mounted) setSub(word.slice(0,i));i++;setTimeout(type,speed)}else{setTimeout(()=>{const del=()=>{if(i>=0){if(mounted) setSub(word.slice(0,i));i--;setTimeout(del,speed/2)}else{if(mounted) setIndex(v=>v+1)}};del()},pause)}};type();return()=>{mounted=false}},[index,words,speed,pause]);return <span className="border-r-2 pr-1">{sub}</span>}
