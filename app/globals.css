@@ -6,3 +6,45 @@ body{@apply bg-gray-900 text-gray-100}
 .btn-primary{@apply px-6 py-3 rounded-2xl font-bold bg-yellow-300 text-gray-900 hover:bg-yellow-400 transition}
 .btn-ghost{@apply px-6 py-3 rounded-2xl border border-white/20 bg-white/10 hover:bg-white/20 transition}
 .card-tilt{@apply will-change-transform transition-transform duration-150}
+
+/* --- Chatbot Light/Dark Mode FINAL-FINAL Fix --- */
+
+/* --- 1. DEFAULT (LIGHT MODE) STYLES --- */
+
+/* Input text ko BLACK karo */
+.react-chatbot-kit-chat-input {
+  color: #000 !important;
+}
+/* Placeholder ko GREY karo */
+.react-chatbot-kit-chat-input::placeholder {
+  color: #555 !important;
+}
+/* User ka bubble (light blue) hai, toh text ko BLACK karo */
+.react-chatbot-kit-user-chat-message {
+  color: #000 !important;
+}
+/* Bot ka bubble (dark blue) hai, toh text ko WHITE karo */
+.react-chatbot-kit-bot-chat-message {
+  color: #fff !important;
+}
+
+
+/* --- 2. DARK MODE STYLES --- */
+/* (Jab Dark Mode on ho) */
+
+/* Input text ko WHITE karo */
+.dark .react-chatbot-kit-chat-input {
+  color: #fff !important;
+}
+/* Placeholder ko halka WHITE karo */
+.dark .react-chatbot-kit-chat-input::placeholder {
+  color: #ccc !important;
+}
+/* User ka bubble (dark blue) ho jaata hai, toh text ko WHITE karo */
+.dark .react-chatbot-kit-user-chat-message {
+  color: #fff !important;
+}
+/* Bot ka bubble (light blue) ho jaata hai, toh text ko BLACK karo */
+.dark .react-chatbot-kit-bot-chat-message {
+  color: #000 !important;
+}
